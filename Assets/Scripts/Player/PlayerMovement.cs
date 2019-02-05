@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Tutorial
 {
+    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Animator))]
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField]
@@ -12,14 +14,14 @@ namespace Tutorial
         private float camRayLength = 100.0f;
         private Vector3 movement;
         private int floorMask;
-        private Animator myAnimator;
         private Rigidbody myRigidbody;
+        private Animator myAnimator;
 
         private void Awake()
         {
             floorMask = LayerMask.GetMask("Floor");
-            myAnimator = GetComponent<Animator>();
             myRigidbody = GetComponent<Rigidbody>();
+            myAnimator = GetComponent<Animator>();
         }
 
         private void FixedUpdate()
