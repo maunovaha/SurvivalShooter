@@ -1,4 +1,4 @@
-# SurvalShooter
+# SurvivalShooter
 
 ...
 
